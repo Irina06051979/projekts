@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  /*lapas krāsa*/
+  background-color: #b2f5ed;
+  font-family: 'Arial Narrow Bold', sens-serif;
+}
+
+h1 {
+  color: #5d0363;
+  /*nosaukuma krāsa*/
+  font-size: 36px;
+  text-align: center;
+  font-family: 'Sofia', sans-serif;
+}
+
+p {
+  color: #f10920;
+  /*rīndkopas krās*/
+  font-size: 20px;
+}
+
+td {
+  /*būrtu krāsa tabulā*/
+  color: #0937f1;
+  font-size: 20px;
+}
