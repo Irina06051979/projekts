@@ -1,14 +1,87 @@
-html {
+html, body{
   height: 100%;
   width: 100%;
-}
-
-body {
+  margin: 0;
+  padding: 0;
   /*lapas krāsa*/
   background-color: #b2f5ed;
   font-family: 'Arial Narrow Bold', sens-serif;
 }
-
+.topnav {
+  overflow: hidden;
+  background-color: #e91616;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 200px;
+}
+.topnav a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0f0f5;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active{
+  background-color: #04AA6D;
+  color: white;
+}
+.sans{
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f4aeae;
+}
+.sans a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #f0f0f5;
+  font-size: 18px;
+}
+.sans a:hover {
+  background-color: #f2d307;
+  color: #050dff;
+}
+main {
+  margin-left: 200px;
+  padding:20px;
+}
+footer{
+  background-color: #f4aeae;
+  text-align: center;
+  color: white;
+  padding: 100px;
+  bottom: 0;
+  width: 100%;
+}
+button {
+  background-color: #320ced;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  margin-bottom: 50px;
+  transition: baackground-color 0.3s ease;
+  border-radius: 8px;
+}
+button:hover{
+  background-color: #979af2;
+  color: #141415;
+}
 h1 {
   color: #5d0363;
   /*nosaukuma krāsa*/
@@ -21,6 +94,49 @@ p {
   color: #f10920;
   /*rīndkopas krās*/
   font-size: 20px;
+}
+
+#saturs{
+  background-color: #f5198f;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px; 
+}
+#saturs p{
+  color: #f8f80d;
+  font-size: 20px;
+  text-align: center;
+}
+#saturs img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+#tabula{
+  background-color: #e7dae1;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px; 
+}
+#canva{
+  background-color: #eeedc8;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px; 
+}
+#tabula table{
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-bottom: 20px;
+}
+ #tabula td{ /*centret tekstu tabula*/
+   padding: 10px;
+   border: 1px solid #ccc;
+   text-align: center;
+ }
+#tabula th:nth-child(3){
+  background-color: red;
 }
 
 td {
