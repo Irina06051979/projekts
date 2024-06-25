@@ -1,5 +1,20 @@
-window.onload = function()
-{
+function atjaunotIetvaru(which){
+  document.getElementById("lapas_saturs").innerHTML = '<'+'object id="lapas" type="text/html" data="'+which.href+'"></'+'object>';
+}
+
+window.onload = function() {
+  zimetuzcanva();
+    var navLinks = document.querySelectorAll('.topnav a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        navLinks.forEach(function(link) {
+          link.classList.remove('active');
+        });
+        this.classList.add('active');
+      });
+    });
+  }
+function zimetuzcanva(){
   var canvas = document.getElementById("zimejums");
   var ctx = canvas.getContext("2d");
   ctx.fillStyle = "red";
@@ -45,3 +60,45 @@ konteksts.fonts = "100px Arial";
   konteksts.stroke();
 
 }
+
+function aprekins(){
+  let vards=document.getElementById("vards").value;
+  let pirmais = parseInt(document.getElementById("a").value);
+  let otrais = parseInt(document.getElementById("b").value);
+  if(!vards.match(/^\S[a-zA-Zā-žĀ-Ž]+$/)){
+    alert("Lūdzu ievadiet vārdu!");
+    return;
+  }
+  if(isNaN(pirmais) || isNaN(otrais)){
+    alert("Lūdzu ievadiet skaitļus!");
+    return;
+  }
+  if(!Number.isInteger(Number(pirmais)) || !Number.isInteger(Number(otrais))){
+    alert("Ievādi veselo skaitli!");
+    return;
+  }
+  let summa = pirmais * otrais;
+  console.log("Tevi sauc: " + vards + " Atbilde ir: " + summa);
+  document.getElementById("rezultats").innerHTML = "Tevi sauc: " + vards + "<br> Tu ievadiji a vertibu: " + pirmais + "<br> un otra vertiba: " + otrais + "<br> Atbilde ir: " + summa;
+}
+function myMap(){
+   var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(55.872147, 26.523486), // Koordinātes, kur centrēt karti
+    zoom: 10 // Mērogojuma līmenis
+};
+   var map = new google.maps.Map(mapCanvas, mapOptions);
+  }
+let age=32;
+if(age<18){
+  console.log("nav pilngadigs");}
+else if(age>=18 && age<65){
+  console.log("Pieaugušais");}
+else{
+  console.log("Pensionārs");}
+
+for(let i=0; i<=10; i++){
+  console.log(i);
+  if(i==5){
+  console.log("Atrasts");
+}}
